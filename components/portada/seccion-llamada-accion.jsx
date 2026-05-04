@@ -58,17 +58,7 @@ function SeccionLlamadaAccion() {
                     Escribinos por WhatsApp
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Boton>
-                  <Boton
-    size="lg"
-    variant="outline"
-    className="h-11 sm:h-12 lg:h-14 px-4 sm:px-6 lg:px-8 text-xs sm:text-sm lg:text-base rounded-full border-foreground/20 hover:bg-foreground/5 w-full sm:w-auto"
-    asChild
-  >
-                    <a href={`tel:${INFO_NEGOCIO.phone}`}>
-                      <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                      Llamar ahora
-                    </a>
-                  </Boton>
+      
                 </div>
 
                 {
