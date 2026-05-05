@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Boton } from "@/components/interfaz/boton";
-import { Calendar, Gauge, ArrowRight } from "lucide-react";
+import { Calendar, Gauge, ArrowRight, Car, Bike } from "lucide-react";
 import { obtenerNombreCompletoVehiculo } from "@/lib/vehiculos";
 import { obtenerUrlWhatsAppVehiculo } from "@/lib/constantes";
 import { usarEnVista } from "@/hooks/usar-en-vista";
@@ -20,15 +20,28 @@ function TarjetaVehiculo({ vehicle, index = 0 }) {
     onMouseLeave={() => setIsHovered(false)}
   >
       <div className="relative border border-foreground/10 bg-card overflow-hidden hover:border-foreground/30 transition-all duration-500">
-        {
-    /* Image */
-  }
+        {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
           <img
-    src={vehicle.image}
-    alt={obtenerNombreCompletoVehiculo(vehicle)}
-    className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? "scale-110" : "scale-100"}`}
-  />
+            src={vehicle.image}
+            alt={obtenerNombreCompletoVehiculo(vehicle)}
+            className={`w-full h-full object-cover transition-transform duration-700 ${isHovered ? "scale-110" : "scale-100"}`}
+          />
+          {/* Badges */}
+          <div className="absolute top-3 left-3 flex items-center gap-2">
+            {vehicle.condicion === "0km" && (
+              <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-brand text-white tracking-wide">
+                0 km
+              </span>
+            )}
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium bg-background/80 backdrop-blur-sm text-foreground">
+              {vehicle.tipo === "moto"
+                ? <Bike className="w-3 h-3" />
+                : <Car className="w-3 h-3" />
+              }
+              {vehicle.tipo === "moto" ? "Moto" : "Auto"}
+            </span>
+          </div>
         </div>
 
         {
