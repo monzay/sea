@@ -30,6 +30,7 @@ function Navegacion() {
   >
               {INFO_NEGOCIO.name}
             </span>
+            <span className="w-2 h-2 rounded-full bg-brand" aria-hidden="true" />
           </a>
 
           {
@@ -42,7 +43,7 @@ function Navegacion() {
     className="text-xs lg:text-sm text-foreground/70 hover:text-foreground transition-colors duration-300 relative group"
   >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-brand transition-all duration-300 group-hover:w-full" />
               </a>)}
           </div>
 
