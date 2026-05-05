@@ -17,29 +17,19 @@ function SeccionHeroe() {
     return () => clearInterval(interval);
   }, []);
   return <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-      {
-    /* Subtle grid lines */
-  }
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        {[...Array(8)].map((_, i) => <div
-    key={`h-${i}`}
-    className="absolute h-px bg-foreground/10"
-    style={{
-      top: `${12.5 * (i + 1)}%`,
-      left: 0,
-      right: 0
-    }}
-  />)}
-        {[...Array(12)].map((_, i) => <div
-    key={`v-${i}`}
-    className="absolute w-px bg-foreground/10"
-    style={{
-      left: `${8.33 * (i + 1)}%`,
-      top: 0,
-      bottom: 0
-    }}
-  />)}
-      </div>
+      {/* Background image with responsive sizing and overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/hero-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background/80" />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
         {
