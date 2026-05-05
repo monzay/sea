@@ -49,8 +49,7 @@ function SeccionHeroe() {
     className={`mb-8 transition-all duration-700 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
   >
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground">
-            <span className="w-8 h-px bg-brand" />
-            <span className="w-1.5 h-1.5 rounded-full bg-brand" />
+            <span className="w-8 h-px bg-foreground/30" />
             Tu próximo auto te espera
           </span>
         </div>
@@ -76,7 +75,7 @@ function SeccionHeroe() {
                       {char}
                     </span>)}
                 </span>
-                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-brand/20" />
+                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-foreground/10" />
               </span>
             </span>
           </h1>
@@ -101,7 +100,7 @@ function SeccionHeroe() {
   >
             <Boton
     size="lg"
-    className="bg-brand hover:bg-brand/90 text-brand-foreground px-8 h-14 text-base rounded-full group"
+    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
     asChild
   >
               <a href="#catalogo">

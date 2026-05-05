@@ -10,9 +10,9 @@ function EncabezadoSeccion({
   const { ref, estaVisible } = usarEnVista();
   return <div ref={ref} className={`mb-16 lg:mb-24 ${align === "center" ? "text-center" : ""}`}>
       <span className={`inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6 ${align === "center" ? "justify-center" : ""}`}>
-        <span className="w-8 h-px bg-brand" />
+        <span className="w-8 h-px bg-foreground/30" />
         {eyebrow}
-        {align === "center" && <span className="w-8 h-px bg-brand" />}
+        {align === "center" && <span className="w-8 h-px bg-foreground/30" />}
       </span>
       
       <div className={`flex flex-col ${align === "left" ? "lg:flex-row lg:items-end lg:justify-between" : ""} gap-6`}>

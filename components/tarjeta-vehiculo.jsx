@@ -60,7 +60,7 @@ function TarjetaVehiculo({ vehicle, index = 0 }) {
   }
           <Boton
     variant="outline"
-    className="w-full rounded-full text-xs sm:text-sm h-9 sm:h-10 border-foreground/20 hover:bg-brand hover:text-brand-foreground hover:border-brand transition-all duration-300 group/btn"
+    className="w-full rounded-full text-xs sm:text-sm h-9 sm:h-10 border-foreground/20 hover:bg-foreground hover:text-background transition-all duration-300 group/btn"
     onClick={handleConsultar}
   >
             Consultar

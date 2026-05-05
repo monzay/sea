@@ -15,7 +15,6 @@ function SeccionPie() {
             <div className="col-span-1 sm:col-span-2">
               <a href="#" className="inline-flex items-center gap-2 mb-4 sm:mb-6">
                 <span className="text-lg sm:text-xl lg:text-2xl font-display">{INFO_NEGOCIO.name}</span>
-                <span className="w-2 h-2 rounded-full bg-brand" aria-hidden="true" />
               </a>
 
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4 max-w-xs">
