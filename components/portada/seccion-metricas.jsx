@@ -29,7 +29,7 @@ function AnimatedCounter({ end, suffix = "", prefix = "" }) {
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [end, hasAnimated]);
-  return <div ref={ref} className="text-6xl lg:text-8xl font-display tracking-tight">
+  return <div ref={ref} className="text-6xl lg:text-8xl font-display tracking-tight text-brand">
       {prefix}{count.toLocaleString()}{suffix}
     </div>;
 }

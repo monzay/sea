@@ -40,7 +40,7 @@ function SeccionLlamadaAccion() {
   }
               <div className="flex-1 w-full">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-display tracking-tight mb-4 sm:mb-6 md:mb-8 leading-[1.1] sm:leading-[0.95]">
-                  Visitanos hoy
+                  <span className="text-brand">Visitanos hoy</span>
                   <br />y encontrá tu auto
                 </h2>
 
@@ -52,7 +52,7 @@ function SeccionLlamadaAccion() {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 sm:gap-4 mb-8 sm:mb-12">
                   <Boton
     size="lg"
-    className="bg-foreground hover:bg-foreground/90 text-background px-4 sm:px-6 lg:px-8 h-11 sm:h-12 lg:h-14 text-xs sm:text-sm lg:text-base rounded-full group w-full sm:w-auto"
+    className="bg-brand hover:bg-brand-light text-white px-4 sm:px-6 lg:px-8 h-11 sm:h-12 lg:h-14 text-xs sm:text-sm lg:text-base rounded-full group w-full sm:w-auto"
     onClick={handleWhatsAppClick}
   >
                     Escribinos por WhatsApp

@@ -63,7 +63,7 @@ function SeccionHeroe() {
   >
             <span className="block">Es hora de</span>
             <span className="block">
-              <span className="relative inline-block">
+              <span className="relative inline-block text-brand">
                 <span key={wordIndex} className="inline-flex">
                   {words[wordIndex].split("").map((char, i) => <span
     key={`${wordIndex}-${i}`}
@@ -75,7 +75,7 @@ function SeccionHeroe() {
                       {char}
                     </span>)}
                 </span>
-                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-foreground/10" />
+                <span className="absolute -bottom-2 left-0 right-0 h-[3px] bg-brand/40" />
               </span>
             </span>
           </h1>
@@ -100,7 +100,7 @@ function SeccionHeroe() {
   >
             <Boton
     size="lg"
-    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+    className="bg-brand hover:bg-brand-light text-white px-8 h-14 text-base rounded-full group"
     asChild
   >
               <a href="#catalogo">

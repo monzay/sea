@@ -30,6 +30,7 @@ function Navegacion() {
   >
               {INFO_NEGOCIO.name}
             </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-brand shrink-0" aria-hidden="true" />
           </a>
 
           {
