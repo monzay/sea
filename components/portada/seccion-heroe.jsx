@@ -27,9 +27,11 @@ function SeccionHeroe() {
         }}
       />
       
-      {/* Gradient overlay: left side opaque for text, right side transparent for car */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 lg:via-background/60 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+      {/* Subtle left overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
+      
+      {/* Bottom gradient: transitions image to white background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80" />
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-28 lg:py-0 lg:min-h-screen flex items-center">
         {/* Two-column layout: content left, car right */}
