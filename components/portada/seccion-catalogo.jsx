@@ -28,8 +28,7 @@ function SeccionCatalogo() {
         <div className="mt-10 sm:mt-12 lg:mt-16 text-center">
           <Boton
     size="lg"
-    variant="outline"
-    className="rounded-full px-8 sm:px-12 h-12 sm:h-14 text-sm sm:text-base border-brand text-brand hover:bg-brand hover:text-white"
+    className="rounded-full px-8 sm:px-12 h-12 sm:h-14 text-sm sm:text-base bg-brand text-white hover:bg-brand-light border-0"
     asChild
   >
             <a href="/catalogo">
