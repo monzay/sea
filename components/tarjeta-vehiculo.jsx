@@ -72,7 +72,7 @@ function TarjetaVehiculo({ vehicle, index = 0 }) {
     /* CTA */
   }
           <Boton
-    className="w-full rounded-full text-xs sm:text-sm h-9 sm:h-10 bg-brand text-white hover:bg-brand-light transition-all duration-300 group/btn border-0"
+    className="w-full rounded-full text-xs sm:text-sm h-9 sm:h-10 bg-brand text-white hover:bg-white hover:text-brand transition-all duration-300 group/btn border-0 hover:border hover:border-brand"
     onClick={handleConsultar}
   >
             Consultar

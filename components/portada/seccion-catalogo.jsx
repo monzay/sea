@@ -28,7 +28,7 @@ function SeccionCatalogo() {
         <div className="mt-10 sm:mt-12 lg:mt-16 text-center">
           <Boton
     size="lg"
-    className="rounded-full px-8 sm:px-12 h-12 sm:h-14 text-sm sm:text-base bg-brand text-white hover:bg-brand-light border-0"
+    className="rounded-full px-8 sm:px-12 h-12 sm:h-14 text-sm sm:text-base bg-brand text-white hover:bg-white hover:text-brand border-0 hover:border hover:border-brand transition-all duration-300"
     asChild
   >
             <a href="/catalogo">

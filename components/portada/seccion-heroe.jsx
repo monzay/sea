@@ -27,58 +27,66 @@ function SeccionHeroe() {
         }}
       />
       
-      {/* Gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background/60" />
+      {/* Gradient overlay: left side opaque for text, right side transparent for car */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 lg:via-background/60 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
-        {/* Eyebrow */}
-        <div className={`mb-6 lg:mb-8 transition-all duration-700 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <span className="inline-flex items-center gap-3 text-sm lg:text-base font-mono text-muted-foreground">
-            <span className="w-6 h-px bg-brand" />
-            <span className="w-2 h-2 rounded-full bg-brand" />
-            Encuentra tu vehículo perfecto
-          </span>
-        </div>
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-28 lg:py-0 lg:min-h-screen flex items-center">
+        {/* Two-column layout: content left, car right */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-center">
 
-        {/* Main headline */}
-        <div className="mb-8 lg:mb-12">
-          <h1 className={`text-[clamp(2.5rem,9vw,8rem)] lg:text-[clamp(4rem,12vw,10rem)] font-display font-black leading-[0.85] lg:leading-[0.8] tracking-tighter transition-all duration-1000 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <span className="block text-foreground">Encuentra</span>
-            <span className="block text-brand">Tu auto ideal</span>
-          </h1>
-        </div>
+          {/* LEFT — text content */}
+          <div className="flex flex-col justify-center lg:pr-12">
+            {/* Eyebrow */}
+            <div className={`mb-6 lg:mb-8 transition-all duration-700 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+              <span className="inline-flex items-center gap-3 text-sm lg:text-base font-mono text-muted-foreground">
+                <span className="w-6 h-px bg-brand" />
+                <span className="w-2 h-2 rounded-full bg-brand" />
+                Encuentra tu vehículo perfecto
+              </span>
+            </div>
 
-        {/* Description and CTAs */}
-        <div className="max-w-3xl">
-          <p className={`text-base lg:text-lg xl:text-xl text-muted-foreground leading-relaxed mb-8 lg:mb-10 transition-all duration-700 delay-200 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            Acceso a autos y motos nuevos y usados. Financiamiento flexible, aceptamos tu vehículo y ofrecemos garantía.
-          </p>
+            {/* Main headline */}
+            <div className="mb-8 lg:mb-10">
+              <h1 className={`text-[clamp(3rem,8vw,7rem)] font-display font-black leading-[0.85] tracking-tighter transition-all duration-1000 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+                <span className="block text-foreground">Encuentra</span>
+                <span className="block text-brand">Tu auto ideal</span>
+              </h1>
+            </div>
 
-          {/* CTAs */}
-          <div className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <Boton
-              size="lg"
-              className="bg-brand hover:bg-brand-light text-white px-8 h-14 text-base rounded-full group"
-              asChild
-            >
-              <a href="#catalogo">
-                Ver catálogo
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Boton>
-            <Boton
-              size="lg"
-              variant="outline"
-              className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
-              asChild
-            >
-              <a href="#contacto">
-                <Car className="w-4 h-4 mr-2" />
-                Contacto
-              </a>
-            </Boton>
+            {/* Description */}
+            <p className={`text-base lg:text-lg text-muted-foreground leading-relaxed mb-8 lg:mb-10 max-w-lg transition-all duration-700 delay-200 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+              Autos y motos nuevos y usados. Financiamiento flexible, aceptamos tu vehículo y ofrecemos garantía.
+            </p>
+
+            {/* CTAs */}
+            <div className={`flex flex-col sm:flex-row items-start gap-4 transition-all duration-700 delay-300 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+              <Boton
+                size="lg"
+                className="bg-brand text-white hover:bg-white hover:text-brand hover:border hover:border-brand px-8 h-14 text-base rounded-full group transition-all duration-300"
+                asChild
+              >
+                <a href="#catalogo">
+                  Ver catálogo
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Boton>
+              <Boton
+                size="lg"
+                variant="outline"
+                className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                asChild
+              >
+                <a href="#contacto">
+                  <Car className="w-4 h-4 mr-2" />
+                  Contacto
+                </a>
+              </Boton>
+            </div>
           </div>
+
+          {/* RIGHT — empty on mobile, car shows through background on desktop */}
+          <div className="hidden lg:block" aria-hidden="true" />
         </div>
       </div>
     </section>;
