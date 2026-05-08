@@ -26,7 +26,7 @@ function Navegacion() {
   }
           <a href="#" className="flex items-center gap-2 group">
             <span
-    className={`font-display tracking-tight transition-all duration-500 text-base sm:text-lg md:text-xl ${isScrolled ? "lg:text-xl" : "lg:text-2xl"}`}
+    className={`font-display tracking-tight transition-all duration-500 text-base sm:text-lg md:text-xl text-brand ${isScrolled ? "lg:text-xl" : "lg:text-2xl"}`}
   >
               {INFO_NEGOCIO.name}
             </span>

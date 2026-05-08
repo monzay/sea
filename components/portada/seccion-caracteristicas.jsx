@@ -257,7 +257,7 @@ function FeatureCard({ feature, index }) {
   }
         <div className="flex-1 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-3xl lg:text-4xl font-display mb-4 group-hover:translate-x-2 transition-transform duration-500">
+            <h3 className="text-3xl lg:text-4xl font-display mb-4 group-hover:translate-x-2 transition-transform duration-500 text-brand">
               {feature.title}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
