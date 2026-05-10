@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Boton } from "@/components/interfaz/boton";
 import { ArrowRight, Car } from "lucide-react";
 import { INFO_NEGOCIO } from "@/lib/constantes";
-const words = ["so\xF1ar", "conducir", "disfrutar", "viajar"];
+const words = ["soñaste", "buscabas", "merecés", "esperabas"];
 function SeccionHeroe() {
   const [estaVisible, setIsVisible] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
@@ -51,8 +51,23 @@ function SeccionHeroe() {
             {/* Main headline */}
             <div className="mb-8 lg:mb-10">
               <h1 className={`text-[clamp(3rem,8vw,7rem)] font-display font-black leading-[0.85] tracking-tighter transition-all duration-1000 ${estaVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-                <span className="block text-foreground">Encuentra</span>
-                <span className="block text-brand">Tu auto ideal</span>
+                <span className="block text-foreground">El auto que</span>
+                <span className="relative block text-brand overflow-hidden h-[1.1em]">
+                  <span
+                    key={wordIndex}
+                    className="absolute inset-0 flex items-center animate-word-in"
+                  >
+                    {words[wordIndex].split("").map((char, i) => (
+                      <span
+                        key={`${wordIndex}-${i}`}
+                        className="inline-block animate-char-in"
+                        style={{ animationDelay: `${i * 40}ms` }}
+                      >
+                        {char === " " ? "\u00A0" : char}
+                      </span>
+                    ))}
+                  </span>
+                </span>
               </h1>
             </div>
 

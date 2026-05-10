@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Boton } from "@/components/interfaz/boton";
-import { Calendar, Gauge, ArrowRight, Car, Bike } from "lucide-react";
+import { Calendar, Gauge, ArrowRight, Car, Bike, Flame, Zap } from "lucide-react";
 import { obtenerNombreCompletoVehiculo } from "@/lib/vehiculos";
 import { obtenerUrlWhatsAppVehiculo } from "@/lib/constantes";
 import { usarEnVista } from "@/hooks/usar-en-vista";
@@ -66,6 +66,15 @@ function TarjetaVehiculo({ vehicle, index = 0 }) {
               <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               {vehicle.year}
             </span>
+            {vehicle.combustible && (
+              <span className={`flex items-center gap-1 sm:gap-1.5 font-medium ${vehicle.combustible === "gnc" ? "text-brand" : ""}`}>
+                {vehicle.combustible === "gnc"
+                  ? <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  : <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                }
+                {vehicle.combustible === "gnc" ? "GNC" : vehicle.combustible === "diesel" ? "Diesel" : "Nafta"}
+              </span>
+            )}
           </div>
 
           {
