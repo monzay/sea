@@ -4,25 +4,19 @@ const features = [
   {
     number: "01",
     title: "Financiamiento Flexible",
-    description: "Planes de financiamiento a tu medida. Trabajamos con los principales bancos para ofrecerte las mejores tasas y cuotas accesibles.",
+    description: "Financiación bancaria o directa por la casa. Planes a tu medida con las mejores tasas y cuotas accesibles para que llegues a tu vehículo.",
     visual: "finance"
   },
   {
     number: "02",
-    title: "Garant\xEDa Extendida",
-    description: "Todos nuestros veh\xEDculos cuentan con garant\xEDa. Usados con revisi\xF3n t\xE9cnica completa y nuevos con garant\xEDa de f\xE1brica.",
-    visual: "warranty"
+    title: "Recibimos tu Vehículo",
+    description: "Tomamos tu auto o moto como parte de pago. Tasación inmediata y sin compromiso para que puedas renovar fácilmente.",
+    visual: "valuation"
   },
   {
     number: "03",
-    title: "Servicio Post-Venta",
-    description: "Te acompa\xF1amos despu\xE9s de la compra. Service oficial, repuestos originales y atenci\xF3n personalizada.",
-    visual: "service"
-  },
-  {
-    number: "04",
-    title: "Tasaci\xF3n al Instante",
-    description: "\xBFQuer\xE9s entregar tu auto usado? Te lo tasamos sin compromiso y te ofrecemos el mejor precio del mercado.",
+    title: "Tasación al Instante",
+    description: "¿Querés vender tu vehículo? Te lo tasamos en el momento y te ofrecemos el mejor precio del mercado.",
     visual: "valuation"
   }
 ];
@@ -76,91 +70,8 @@ function FinanceVisual() {
       </path>
     </svg>;
 }
-function WarrantyVisual() {
-  return <svg viewBox="0 0 200 160" className="w-full h-full">
-      {
-    /* Shield */
-  }
-      <path
-    d="M 100 20 L 150 40 L 150 90 Q 150 130 100 145 Q 50 130 50 90 L 50 40 Z"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  />
-      
-      {
-    /* Inner shield glow */
-  }
-      <path
-    d="M 100 35 L 135 50 L 135 85 Q 135 115 100 128 Q 65 115 65 85 L 65 50 Z"
-    fill="currentColor"
-    opacity="0.1"
-  >
-        <animate attributeName="opacity" values="0.1;0.2;0.1" dur="2s" repeatCount="indefinite" />
-      </path>
-      
-      {
-    /* Checkmark */
-  }
-      <path
-    d="M 75 80 L 92 97 L 125 64"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="4"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-        <animate attributeName="stroke-dasharray" values="0 100;100 0" dur="1.5s" repeatCount="indefinite" />
-      </path>
-    </svg>;
-}
-function ServiceVisual() {
-  return <svg viewBox="0 0 200 160" className="w-full h-full">
-      {
-    /* Wrench */
-  }
-      <g transform="translate(60, 40) rotate(-45)">
-        <rect x="0" y="20" width="80" height="12" rx="2" fill="currentColor" opacity="0.3" />
-        <circle cx="10" cy="26" r="18" fill="none" stroke="currentColor" strokeWidth="3" />
-        <circle cx="10" cy="26" r="8" fill="currentColor" opacity="0.2" />
-      </g>
-      
-      {
-    /* Gear */
-  }
-      <g transform="translate(120, 90)">
-        <circle cx="0" cy="0" r="25" fill="none" stroke="currentColor" strokeWidth="2">
-          <animateTransform
-    attributeName="transform"
-    type="rotate"
-    from="0"
-    to="360"
-    dur="8s"
-    repeatCount="indefinite"
-  />
-        </circle>
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => <rect
-    key={angle}
-    x="-4"
-    y="-30"
-    width="8"
-    height="12"
-    fill="currentColor"
-    opacity="0.3"
-    transform={`rotate(${angle})`}
-  >
-            <animateTransform
-    attributeName="transform"
-    type="rotate"
-    from={angle}
-    to={angle + 360}
-    dur="8s"
-    repeatCount="indefinite"
-  />
-          </rect>)}
-      </g>
-    </svg>;
-}
+
+
 function ValuationVisual() {
   return <svg viewBox="0 0 200 160" className="w-full h-full">
       {
@@ -216,10 +127,6 @@ function AnimatedVisual({ type }) {
   switch (type) {
     case "finance":
       return <FinanceVisual />;
-    case "warranty":
-      return <WarrantyVisual />;
-    case "service":
-      return <ServiceVisual />;
     case "valuation":
       return <ValuationVisual />;
     default:
